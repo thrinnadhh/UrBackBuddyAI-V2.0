@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-white/20;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .tech-border {
+    @apply border border-border;
+  }
+
+  .tech-panel {
+    @apply bg-surface border border-border rounded-sharp shadow-2xl;
+  }
+
+  .tech-button {
+    @apply bg-white text-black hover:bg-white/90 active:scale-[0.98] rounded-sharp px-4 py-2 text-sm font-medium transition-all duration-200 outline-none;
+  }
+
+  .tech-button-muted {
+    @apply bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-sharp px-4 py-2 text-sm font-medium transition-all duration-200;
+  }
+
+  .tech-input {
+    @apply w-full bg-black border border-border rounded-sharp px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-white/50 transition-all;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2 text-sm text-muted rounded-sharp transition-colors hover:bg-white/5 hover:text-white;
+  }
+
+  .sidebar-link-active {
+    @apply flex items-center gap-3 px-3 py-2 text-sm bg-white/10 text-white rounded-sharp font-medium;
+  }
+}
